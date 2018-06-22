@@ -7,6 +7,9 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>hello slack Application</h1>
+  <div style="width: 600px;">
+    <img src="{{.User.Profile.ImageOriginal}}" alt="user image" style="display: block; width: 100%;">
+  </div>
+  <p>Name: {{.User.Profile.DisplayName}}</p>
 </body>
 </html>

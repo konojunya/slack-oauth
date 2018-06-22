@@ -36,7 +36,8 @@ func main() {
 
 	r.GET("/", func(c *gin.Context) {
 		if service.Credential != nil {
-			c.HTML(http.StatusOK, "index.html", nil)
+			info := service.GetUserInfo()
+			c.HTML(http.StatusOK, "list.html.tpl", info)
 			return
 		}
 		c.HTML(http.StatusOK, "first.html", nil)
